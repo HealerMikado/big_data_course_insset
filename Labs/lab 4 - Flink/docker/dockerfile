@@ -1,0 +1,10 @@
+FROM flink:latest
+
+RUN apt update -y && \
+    apt upgrade -y && \
+    apt install -y software-properties-common && \
+    apt-add-repository ppa:deadsnakes/ppa && \
+    apt install -y python3.9 python3-pip python3.9-distutils nano && rm -rf /var/lib/apt/lists/*
+RUN ln -s /usr/bin/python3.9 /usr/bin/python
+
+RUN python -m pip install --default-timeout=100 apache-flink==1.16.0

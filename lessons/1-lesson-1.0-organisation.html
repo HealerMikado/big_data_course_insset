@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>1-lesson-1.0-organisation.knit</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Arthur Katossky &amp; Rémi Pépin" />
+    <script src="1-lesson-1.0-organisation_files/header-attrs-2.12/header-attrs.js"></script>
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/mine.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <div class="line-block">Introduction to Big Data<br />
+Lesson 1.0 Course Introduction</div>
+### Arthur Katossky &amp; Rémi Pépin
+### Wednesday, March 30, 2022
+
+---
+
+
+# An intoduction to something _big_ 
+
+Two revolutions at the same time
+
+- Big data revolution : data science oriented 
+- Cloud computing : IT oriented
+
+
+--
+This course is a __introduction__ to those two revolutions. So you won't be experts
+on those fields. But you will learn a lot about computers and IT in general
+
+???
+Because Big Data and Cloud Computing are related at some point, this course can
+be technically hard. You will use multiples technologies you still don't know, but
+they are important for a real data scientist
+
+---
+
+## The two speakers
+
+- Rémi Pepin :  teaching assistant in the IT department and former Java developer at Insee
+- Arhur Katossky : NLP enthusiast, currently student at Ensae, former  teaching assistants in the economy department.
+
+---
+
+## The objectives
+
+1. Understand the basics of computation in the real world, the bottlenecks and how to solve them
+2. Understand the basics of cloud computing and how to use AWS 
+3. Get familiar with big data technologies and the most common paradigm
+4. Learn how to use Spark for data exploration on data at rest or streamed data, and how to some basics ML algorithm on big data
+
+---
+
+## How you will be graded
+
+- One graded lab at the end of the coures
+- One quick exam after the course
+---
+
+## Last warning
+
+The labs are more like tutorials than practical session. Because you will discover
+new things, labs follow the "To do X you have to use Y" paradigm.
+
+--
+
+If you think it's too easy, you can explore things by yourself =)
+
+???
+We think it's a good way to learn new things, because you can be autonomous and you are never blocked. If you think
+it's too easy, you can explore things by yourself =). 
+
+---
+## A little game : which is the fastest ? 
+
+- US weather data : 1 file per year, 71 years of data, around 6Go when gziped
+- Extract the max temperature of each year
+- 7 contestants :
+  - a classic R script with only R core function
+  - a classic python loop (loop through file + read each line one by one)
+  - a same but with Cython (python compiled in C)
+  - the same code but in C. This code is compiled to machine code
+  - The same code but in java. This code is compiled to byte code (need JVM)
+  - python but each file are process in parallel (with 12 cores)
+  - a `awk` command in bash to read each line of each file 
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightLines": null,
+"ratio": "16:10",
+"scroll": false,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS weather_data_unnnested AS
+SELECT 
+    weather_station,
+    latitude,
+    longitude,
+    elevation,
+    time,
+    air_temperature.value as air_temperature,
+    dew_point.value as dew_point,
+    wind_speed.value as wind_speed,
+    wind_direction.value as wind_direction,
+    sea_level_pressure.value as sea_level_pressure,
+    sky_ceiling.value as sky_celiling,
+    visibility_distance.value as visibility_distance,
+    sky_cov.cloud_type as cloud_type,
+    weather_cond.present_weather_condition as present_weather_condition
+FROM "weather_station_db"."weather_station_data_25012023" 
+CROSS JOIN UNNEST(sky_cover_condition) AS t(sky_cov)
+CROSS JOIN UNNEST(weather_condition) AS t(weather_cond)

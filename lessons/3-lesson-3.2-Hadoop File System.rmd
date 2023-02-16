@@ -1,0 +1,173 @@
+---
+title: "Hadoop file system (HDFS)"
+author: "Arthur Katossky & Rémi Pépin"
+output: 
+  xaringan::moon_reader:
+    nature:
+      highlightLines: 
+      ratio: 16:9
+      scroll: false
+      countIncrementalSlides: false
+    css: ["css/xaringan-themer.css", "css/mine.css"]
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## HDFS in a nutshell
+
+- A widely use distributed file system
+- The default storage layer of the the Hadoop Ecosystem
+- Write once, read many philosophy
+- Can store *very large file* 
+
+
+---
+## The Hadoop Ecosystem
+
+<img src="img/hadoop ecosystem.png" style="width: 80%; display: block; margin-left: auto;margin-right: auto" />
+
+---
+
+## Why shoud you use Hadoop ?
+
+- Open-source financed by the Apache Foundation
+- Well spread
+- Well documented
+- Lot's of related projects (Spark, Hive, Solr, Kafka)
+
+---
+
+## Who use Hadoop ?
+
+Basically every companies that need 100+ TOs storage system
+
+- La Poste Groupe
+- la DGA
+- Thales
+- EDF
+- Société Générale
+- Criteo
+- Facebook, Twitter
+
+.footnote[Source : recherche Linkedin]
+]
+
+---
+
+
+## The HDFS architecture
+
+### Architecture
+
+ Main/workers architecture
+
+- **NameNode** (main): manage the file system. Doesn't store any file. It store *in disk* only the namespace image and edit logs. It keep in *memory* the physical location of the data block.
+- **DataNode** (worker): workhorse of the system. They store and retrieve blocks when they are told to.
+
+---
+
+## The HDFS architecture
+
+### How does it work ?
+
+- Each file are split in **block** (128 Mb by default).
+- Those blocks are stored in **DataNodes**. To provide high reliability, each blocks are stored on multiple (3 by defaults) **DataNode**.
+- The **NameNode** keeps in memory how each file is splited and where each block is stored.
+
+---
+
+### How does it work ?
+
+![](img/hdsf/hadoop example.png)
+
+---
+
+### How to get a file ?
+
+- A client requests a file to the NameNode 
+- The NameNode selects for each file block a DataNode
+- It sends back to the client where to find each block
+- The client request the selected DataNodes and merge the blocks back together
+
+--
+
+**Pros**: 
+
+- No network nor process overload for the NameNode
+- The NameNode can handle a lot of request at the same time 
+- Tries to select the best DataNodes
+
+--
+
+**Con**:
+
+- NameNode single point of failure (there are solutions)
+
+---
+## How to use HDFS 
+
+- You need a cluster with HDFS to store file (obviously) 
+- HDFS doesn't provide a fancy GUI to interact with  :
+  - Install the hadoop CLI on your machine
+  - Use the Java API 
+  - Use the [WebHDFS REST API](https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-hdfs/WebHDFS.html)
+- Install HUE, an GUI for the Hadoop ecosystem
+
+
+???
+
+If your are using python you should use the WebHDFS, it works like a webservice
+
+---
+## Pros of HDFS
+
+- Fault tolerance :
+  - Resilient to DataNode failure
+  - NameNode failure can stop the system for some time, but if the log and the namespace image are still here the system can reboot (that's why they are persist on disk). Or you can use multiple NameNode
+- High throughput
+- Scale easily
+  - Just add mote DataNode for more storage capacity
+  - For very large system one NameNode can be insufficient 
+
+---
+
+## Cons of HDFS
+
+- High latency data access
+- Can't handle lots of small file
+- No concurrent write for the same file
+- No arbitrary modification of a file. Can only add content at the end
+- Not elastic
+
+---
+## HDFS is a good choice when you want to
+
+- store very big files
+- store read only files
+- build all the Hadoop stack on top
+- store file for batch processing (as opposed to interactive processing)
+
+---
+## HDFS is a bad choice when you want to
+
+- store a lots of small files
+- store files that are edited a lot
+- store file used by system which need low latency
+
+---
+## Keep in mind
+
+- HDFS is only a storage solution !
+- There are frameworks to process data like  **MapReduce**,  **Spark** or **Storm** 
+- HDFS doesn't have a GUI, it's all command line (CLI)
+- Today with cloud provider you can create a big HDFS cluster in a snap
+- Cloud providers have they own storage solution (S3, Azure blob, Google Cloud Storage) (usually cheaper)
+---
+class: center, middle
+
+
+<img src="img/meme/what did it cost.jpg" style="width: 80%;" />

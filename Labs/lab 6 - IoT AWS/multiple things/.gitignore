@@ -1,0 +1,10 @@
+# Ignore VS workspace settings
+**/.vscode
+
+
+# Ignore all the certificates
+*.crt
+
+
+# Ignore all the private and public keys
+*.key

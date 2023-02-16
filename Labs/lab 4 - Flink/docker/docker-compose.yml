@@ -1,0 +1,25 @@
+version: "2.2"
+services:
+  jobmanager:
+    image: remipepin/big-data:pyflink-tp
+    ports:
+      - "8081:8081"
+    command: jobmanager
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager     
+    volumes:
+      - ./codes:/opt/flink/codes/
+
+  taskmanager:
+    image: remipepin/big-data:pyflink-tp
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    scale: 2
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        taskmanager.numberOfTaskSlots: 2    
