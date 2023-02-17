@@ -1,4 +1,25 @@
-# Création d'un pipeline d'analyse de donnée pour IoT
+---
+layout: page
+title: Lab 4 - Création d'un pipeline d'analyse de données pour IoT 📱
+---
+
+- [🎯Objectifs](#objectifs)
+- [🧱Mise en place](#mise-en-place)
+- [📱Mon premier objet](#mon-premier-objet)
+  - [Connection MQTT avec les outils AWS](#connection-mqtt-avec-les-outils-aws)
+    - [✍ Hands-on](#-hands-on)
+- [🚄Création du pipeline](#création-du-pipeline)
+  - [⛅Création de la flotte de stations météo](#création-de-la-flotte-de-stations-météo)
+  - [📦Mon premier data warehouse : Amazon S3](#mon-premier-data-warehouse--amazon-s3)
+  - [🚿Charger les messages efficacement : Amazon Kinesis Data Firehose](#charger-les-messages-efficacement--amazon-kinesis-data-firehose)
+    - [✍ Hands-on : utilisation d'Amazon DynamoDB](#-hands-on--utilisation-damazon-dynamodb)
+  - [🕷🦸‍♀️Découvrir le schéma de données avec AWS Glue, les requêter avec Amazon Athena](#️découvrir-le-schéma-de-données-avec-aws-glue-les-requêter-avec-amazon-athena)
+    - [🕷Aws Glue](#aws-glue)
+    - [🦸‍♀️Amazon Athena](#️amazon-athena)
+  - [📊Visualisation des données avec Amazon Quicksight](#visualisation-des-données-avec-amazon-quicksight)
+    - [📝Mise en forme des données](#mise-en-forme-des-données)
+    - [📊Quicksight](#quicksight)
+
 
 ## 🎯Objectifs 
 

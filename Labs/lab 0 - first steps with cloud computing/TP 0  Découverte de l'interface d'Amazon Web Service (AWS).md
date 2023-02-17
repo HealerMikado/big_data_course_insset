@@ -1,6 +1,26 @@
+---
+layout: page
+---
+
 # TP 0 — Partie 1: Découverte de l'interface d'Amazon Web Service (AWS)
 
-[TOC]
+- [Objectifs](#objectifs)
+- [1. Création du compte AWS Academy](#1-création-du-compte-aws-academy)
+- [2. Exploration](#2-exploration)
+- [3 Création d'un espace de stockage Amazon Simple Storage Service (S3)](#3-création-dun-espace-de-stockage-amazon-simple-storage-service-s3)
+- [4. Copie des données dans votre espace de stockage](#4-copie-des-données-dans-votre-espace-de-stockage)
+- [5. Création d'une clef SSH](#5-création-dune-clef-ssh)
+- [6. Création d'une machine virtuelle](#6-création-dune-machine-virtuelle)
+- [7. Connexion à sa VM](#7-connexion-à-sa-vm)
+  - [Si vous avez Windows](#si-vous-avez-windows)
+  - [Si vous avez macOS/Linux](#si-vous-avez-macoslinux)
+- [8. Jouer avec sa VM](#8-jouer-avec-sa-vm)
+  - [8.1 Mise en place des fichiers du TP](#81-mise-en-place-des-fichiers-du-tp)
+  - [8.2 Installer R, java, un compilateur C et un package python](#82-installer-r-java-un-compilateur-c-et-un-package-python)
+  - [8.2 Benchmark des langages](#82-benchmark-des-langages)
+  - [8.3 Un shell dans le navigateur](#83-un-shell-dans-le-navigateur)
+- [9. Eteindre sa VM](#9-eteindre-sa-vm)
+
 
 ## Objectifs
 

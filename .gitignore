@@ -5,6 +5,13 @@
 
 .pdf
 
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+Gemfile.lock
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

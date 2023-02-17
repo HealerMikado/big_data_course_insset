@@ -1,15 +1,34 @@
 ---
-
+layout: page
+title: Lab 2 - First steps with Spark
 ---
 
-# Lab 2 - First steps with Spark
+- [Outline](#outline)
+- [⛅​ Spark cluster creation in AWS](#-spark-cluster-creation-in-aws)
+- [💾First steps with Spark - Data importation](#first-steps-with-spark---data-importation)
+  - [✍Hands-on 1  - Data importation](#hands-on-1----data-importation)
+- [🥉Data frame basic manipulations](#data-frame-basic-manipulations)
+  - [😴Lazy evaluation](#lazy-evaluation)
+  - [✍Hands-on 2 - Data frame basic manipulations](#hands-on-2---data-frame-basic-manipulations)
+- [🥈Basic DataFrame column manipulation](#basic-dataframe-column-manipulation)
+  - [✍Hands-on 3 - Basic DataFrame column manipulation](#hands-on-3---basic-dataframe-column-manipulation)
+- [🥇Advance DataFrame column manipulation](#advance-dataframe-column-manipulation)
+  - [🥽Array manipulation](#array-manipulation)
+    - [✍Hands-on 4 - Array manipulation](#hands-on-4---array-manipulation)
+  - [🥼User defined function](#user-defined-function)
+    - [✍Hands-on 5 - User defined function](#hands-on-5---user-defined-function)
+- [🔩Aggregation functions](#aggregation-functions)
+  - [✍Hands-on 6 - Aggregation functions](#hands-on-6---aggregation-functions)
+- [🧲Grouping functions](#grouping-functions)
+  - [✍Hands-on 7 - Grouping functions](#hands-on-7---grouping-functions)
+- [🔌Spark SQL](#spark-sql)
+  - [✍Hands-on 8 - Spark SQL](#hands-on-8---spark-sql)
+  - [Turn off your cluster](#turn-off-your-cluster)
 
 ## Outline
 
 1. Launching a Spark cluster on AWS
 3. First steps with Spark
-
-[TOC]
 
 ## ⛅​ Spark cluster creation in AWS
 

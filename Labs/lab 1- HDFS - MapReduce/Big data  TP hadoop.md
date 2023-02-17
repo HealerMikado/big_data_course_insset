@@ -1,4 +1,19 @@
-# Big data : TP hadoop
+---
+layout: page
+title: Big data : TP hadoop
+---
+
+
+- [Création un cluster EMR (HDFS/Hadoop MapReduce/Spark) sur AWS](#création-un-cluster-emr-hdfshadoop-mapreducespark-sur-aws)
+- [Manipulation de Hadoop Distributed File System (HDFS)](#manipulation-de-hadoop-distributed-file-system-hdfs)
+- [Lancer un tâche MapReduce de base](#lancer-un-tâche-mapreduce-de-base)
+  - [Wordcount :](#wordcount-)
+  - [Grep](#grep)
+  - [Estimation de Pi](#estimation-de-pi)
+  - [Exercice](#exercice)
+- [Créer ses propres tâches en MapReduce](#créer-ses-propres-tâches-en-mapreduce)
+  - [Exercice : calculer la température max annuelle aux Etats-Unis](#exercice--calculer-la-température-max-annuelle-aux-etats-unis)
+
 
 MapReduce est l'un des modèles de programmation les plus utilisé pour traiter de gros volumes de données. Initialement développé par Google pour pouvoir passer facilement à l'échelle son moteur d'indexation web, il existe aujourd'hui des implémentations open source comme Hadoop MapReduce.
 
@@ -12,7 +27,7 @@ Dans ce TP vous allez :
 
 > Remarque : pour de meilleurs performances les traitements devraient être fait en java. Mais pour gagner du temps nous allons rester en python.
 
-## Création un cluster Hadoop (HDFS/Hadoop MapReduce/Spark) sur AWS
+## Création un cluster EMR (HDFS/Hadoop MapReduce/Spark) sur AWS
 
 Dans cette partie vous allez créer un cluster Hadoop sur AWS. Le procédure ce trouve dans la fiche "Hadoop cluster creation in AWS"
 

@@ -1,4 +1,14 @@
-# Lab 4 - Stream Processing avec Flink 🐿
+---
+layout: page
+title: Lab 3 - Stream Processing avec Flink 🐿
+---
+
+- [📦Mise en place](#mise-en-place)
+  - [🛴Manipulation de bases](#manipulation-de-bases)
+  - [📚Wordcount](#wordcount)
+  - [➕Utilisation des états 1 : sommer des éléments](#utilisation-des-états-1--sommer-des-éléments)
+  - [🕵️‍♀️Utilisation des états 2 : détecter des patterns](#️️utilisation-des-états-2--détecter-des-patterns)
+
 
 ## 📦Mise en place
 
