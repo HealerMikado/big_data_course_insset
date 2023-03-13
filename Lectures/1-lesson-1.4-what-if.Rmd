@@ -31,23 +31,28 @@ We have to distinguish between estimation of a statistical model (always the sam
 .pull-right[![](https://www.flaticon.com/free-icons/question-mark)]
 
 --
-1. Buy more/bigger  </br>
+1. Buy more/bigger 
 --
+
 Easy but expensive. Not the best solution
 
 --
-2. Do less (filter, select, sample) </br>
+2. Do less (filter, select, sample)
 --
+
 Do you really need all this data ? Can statistic help you ?
 
 --
-3. Do things in chunks / stream </br>
+3. Do things in chunks / stream
 --
+
 Need to rethink the process. Or to use exotic libraries 
 
 --
-4. Distribute the data </br>
+
+4. Distribute the data
 --
+
 Go to the cloud, or use a Spark cluster, use in DB processes ...
 
 ---

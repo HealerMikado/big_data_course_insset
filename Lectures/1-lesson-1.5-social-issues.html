@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>1-lesson-1.5-social-issues.knit</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Arthur Katossky &amp; Rémi Pépin" />
+    <script src="1-lesson-1.5-social-issues_files/header-attrs-2.12/header-attrs.js"></script>
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/mine.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <div class="line-block">Introduction to Big Data<br />
+Lesson 1.5 Social-issues</div>
+### Arthur Katossky &amp; Rémi Pépin
+
+---
+
+
+## Ethical issues
+
+- **Privacy** : more data are collected and analyzed, but in what extend and for what ? 
+- **Discrimination** : predictive justice, recruitment, social network (doom scrolling)
+- **Consent** : do individuals agree to give their data ? Do they really understand ? Have the choice ?
+- **Transparency** : how models work ? What are their purpose ? 
+- **Security** : more data collected = more risk of data breaches = more cyber attacks
+
+
+???
+
+- too much information -&gt; everyone is identifiable
+- retroactive content (the collection of data depends on what the algorithm produces and the algorithm learns from the data, ex: video recommendations on YouTube)
+- security issues (all the 3 giants are forced to comply by the American intelligence agencies)
+
+---
+## Are ML model discriminating ?
+
+- [Twitter investigates racial bias in image previews](https://www.bbc.com/news/technology-54234822)
+- [Amazon’s sexist AI recruiting tool: how did it go so wrong?](https://becominghuman.ai/amazons-sexist-ai-recruiting-tool-how-did-it-go-so-wrong-e3d14816d98e)
+- [Predictive policing algorithms are racist. They need to be dismantled.](https://www.technologyreview.com/2020/07/17/1005396/predictive-policing-algorithms-racist-dismantled-machine-learning-bias-criminal-justice/)
+- [Google Photos Tags Two African-Americans As Gorillas Through Facial Recognition Software](https://www.forbes.com/sites/mzhang/2015/07/01/google-photos-tags-two-african-americans-as-gorillas-through-facial-recognition-software/)
+
+
+---
+## Do data scientists do it on purpose ?
+--
+
+NO !
+--
+
+- ML model learn from input data
+- If your input data are biased : lake of diversity or based on biased processes your model will be biased
+
+--
+
+Hard to find biased in your data if you don't realize that some groups are discriminated and in what extend.
+
+--
+
+The best solution is to have a team with multiple profiles
+
+---
+
+## Environmental issues
+
+- **Energy consumption** : the Internet : 10% electricity consumption worldwide, 1 data center = consumption of 30 000 habs.[1]
+- **E-Waste / Rare earth metals** : need to recycle components ! Computers use rare earth metals, usually mined in developing countries (working regulation ? pollution ?). Risk of run out in the future. 
+- **Carbon Emissions / Water consumption** : building and running data center are polluting. Data center operator try to build green data center by producing their own energy.
+
+--
+
+&gt; Even if effort are made to reduce all those issues, because it's easy to use the overall energy consumption of big data increase. Rebound effect
+
+
+.footnote[[1][source](https://www.fournisseur-energie.com/internet-plus-gros-pollueur-de-planete/)]
+
+???
+
+- environmental resource consumption of storing / computing / communication
+- both the energ consumption
+- but also what to do with all the waste
+-  Cloud computing makes it easy to get state of the art infrastructures. Current python libraries make machine learning accessible. It's easier than ever to train and deploy consumming application so lot of companies does that.
+
+---
+
+## Political issues
+
+- **Surveillance** : easy to watch people in the current era. Like targeted add, or detecting odd behavior with pattern detection.
+- **Misinformation** : target contents to polarize people (electoral manipulation), distilled propaganda (Chinese video on TikTok). Not new phenomenon, big data helps to industrialize it.
+- **Biased algorithm** : decision-making algorithm are widely spread but they are mostly biased because of the training data. How to prevent that ?
+- **Transparency** : ML algorithm seems magical by lot of people. It's important to explain how they work and IA models are not intelligent.
+- **GAFAM** : currently Europe is dependent of American companies. OVH growing but sill behind.
+
+&gt; It's a complex problem for ours democraties. Big data is here and will stay. Peoples need to be educated to understand the current state of the world.
+
+???
+
+- what independance do you get when all the data is in the hand of a handful of American companies? see the struggle of OVH for existing on this market
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightLines": null,
+"ratio": "16:10",
+"scroll": false,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

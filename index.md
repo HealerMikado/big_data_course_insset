@@ -34,10 +34,10 @@ Il présente ensuite un panorama des technologie étiquetées *big data* et les 
   - Introduction aux enjeux du Big Data : historique, 3V du Big Data, [slides](Lectures\1-lesson-1.1-what-is-big-data.html)
   - Outils non big data pour traiter de grosses volumétrie de données [slides](Lectures\1-lesson-1.2-computer-science-survival-kit.html) [slides](Lectures\1-lesson-1.3-high-performance-computing-without-distribution.html)
   - Problèmes Big Data courants et leurs solutions [slides](Lectures\1-lesson-1.4-what-if.html)
-  - Les enjeux sociétaux du big data
+  - Les enjeux sociétaux du big data [slides](Lectures\1-lesson-1.5-social-issues.html)
 - Jour 1 - après midi : **Introduction au Cloud Computing**
   - Introduction au Cloud Computing : historique, concepts, services, avantages, inconvénients [slides](Lectures\2-lesson-2-Cloud-Computing.html)
-  - TP1 : Cloud Computing [sujet](Labs\lab 0 - first steps with cloud computing\TP 0  Découverte de l'interface d'Amazon Web Service (AWS).html)
+  - TP1 : Cloud Computing [sujet](Labs\lab 0 - first steps with cloud computing.html)
     - Création d'un bucket S3 et d'une instance EC2 sur AWS.
     - Déploiement d'un webservice basique hébergé dans un Auto Scaling Group dernière un Load Balancer
 - Jour 2 - matin : **Les outils pour stocker des données Big Data**
