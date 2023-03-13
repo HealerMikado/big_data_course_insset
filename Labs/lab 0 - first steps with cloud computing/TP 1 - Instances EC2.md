@@ -47,13 +47,13 @@ Encore une chose, le TP est sûrement trop long être fait sur une séance. Si c
 
 4. Vous allez maintenance vous connecter à votre instance.
 
-   **Ubuntu** : ouvrez votre dossier téléchargement ou le dossier qui contient le fichier `labuser.pem` et avec un clic droit ouvrez un terminal dans ce dossier. Puis réaliser la commande suivante : `ssh -i "labuser.pem" ubuntu@[adresseIPv4]` en remplaçant `[adresseIPv4]` par l'adresse de votre instance. Tapez `yes` à la question qui vous sera posée.
+   **Ubuntu** : ouvrez votre dossier téléchargement ou le dossier qui contient le fichier `labsuser.pem` et avec un clic droit ouvrez un terminal dans ce dossier. Puis réaliser la commande suivante : `ssh -i "labuser.pem" ubuntu@[adresseIPv4]` en remplaçant `[adresseIPv4]` par l'adresse de votre instance. Tapez `yes` à la question qui vous sera posée.
 
    **Windows** : ouvrez un powershell (barre de chercher>powershell) et faites
 
    ```
    cd .\Downloads
-   ssh -i "labuser.pem" ubuntu@[adresseIPv4]
+   ssh -i "labsuser.pem" ubuntu@[adresseIPv4]
    ```
 
    en remplaçant `[adresseIPv4]` par l'adresse de votre instance. Tapez `yes` à la question qui vous sera posée.
