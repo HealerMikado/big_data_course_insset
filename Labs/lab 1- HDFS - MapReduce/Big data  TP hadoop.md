@@ -198,7 +198,7 @@ Le format utilisé est un format positionnel. Les données qui nous intéresse p
 
 1. Téléchargez le dataset du TP disponible ici :
 
-   `curl https://raw.githubusercontent.com/HealerMikado/big_data_course_insset/main/Labs/lab%201-%20HDFS%20-%20MapReduce/TP1-Resources/meto_data.txt >> meteo_data.txt`
+   `curl https://raw.githubusercontent.com/HealerMikado/big_data_course_insset/main/Labs/lab%201-%20HDFS%20-%20MapReduce/TP1-Resources/meteo_data.txt >> meteo_data.txt`
 
 2. Uploadez les données dans votre cluster HDFS
 
