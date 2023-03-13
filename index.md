@@ -37,13 +37,13 @@ Il présente ensuite un panorama des technologie étiquetées *big data* et les 
   - Les enjeux sociétaux du big data [slides](Lectures\1-lesson-1.5-social-issues.html)
 - Jour 1 - après midi : **Introduction au Cloud Computing**
   - Introduction au Cloud Computing : historique, concepts, services, avantages, inconvénients [slides](Lectures\2-lesson-2-Cloud-Computing.html)
-  - TP1 : Cloud Computing [sujet](Labs\lab 0 - first steps with cloud computing.html)
+  - TP1 : Cloud Computing [sujet](Labs\lab 0 - first steps with cloud computing/TP 1 - Instances EC2.md.html)
     - Création d'un bucket S3 et d'une instance EC2 sur AWS.
     - Déploiement d'un webservice basique hébergé dans un Auto Scaling Group dernière un Load Balancer
 - Jour 2 - matin : **Les outils pour stocker des données Big Data**
   - Comment stocker des données dans un contexte de big data, File System vs Database, CAP theorem, avantages et inconvénients de la distributions [slides](Lectures\3-lesson-3.1-How-to-store-data.html)
   - Présentation de HDFS et de Hadoop MapReduce [slides](Lectures\3-lesson-3.2-Hadoop-File-System.html) [slides](Lectures\3-lesson-3.3-MapReduce.html)
-  - TP2 : Découverte de HDFS [sujet](Labs\lab 1- HDFS - MapReduce\Big data  TP hadoop.html)
+  - TP2 : Découverte de HDFS [sujet](Labs\lab 1- HDFS - MapReduce\Big data  TP hadoop.html) [aides](Labs\lab 1- HDFS - MapReduce\Hadoop cluster creation in AWS.html)
     - Création d'un cluster EMR sur AWS
     - Upload de données sur HDFS
     - Manipulation des données via Hadoop MapReduce

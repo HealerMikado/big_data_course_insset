@@ -43,7 +43,7 @@ Le but de cette exercice est que vous réalisiez des opération simple sur HDFS.
 hdfs dfs <args>
 ```
 
-Toutes les commandes du shell DFS prennent des URIs en argument. Leur format est  `scheme://authority/path`. Pour HDFS `scheme` vaut `hdfs`, et pour le FS local `file`. `scheme` et `authority` sont optionnels et s'ils ne sont pas spécifiés, le schema par défaut de la configuration est appliqué (pour le TP pas besoin de les remplir). Un fichier ou dossier HDFS comme ` /parent/child` peut être spécifié comme `hdfs://namenodehost/parent/child` ou `/parent/child` (si la configuration par défaut pointe vers `hdfs://namenodehost` )
+Toutes les commandes du shell DFS prennent des URIs en argument. Leur format est  `scheme://authority/path`. Pour HDFS `scheme` vaut `hdfs`, et pour le FS local `file`. `scheme` et `authority` sont optionnels et s'ils ne sont pas spécifiés, le schéma par défaut de la configuration est appliqué (pour le TP pas besoin de les remplir). Un fichier ou dossier HDFS comme `/parent/child` peut être spécifié comme `hdfs://namenodehost/parent/child` ou `/parent/child` (si la configuration par défaut pointe vers `hdfs://namenodehost` )
 
 Voici les commandes les plus courantes :
 
@@ -58,7 +58,7 @@ hdfs dfs -put <localsrc> ... <dst>
 hdfs dfs -rmr URI [URI ...]
 ```
 
-Vous allez maintenant générer des fichiers  loremIpsum-500, loremIpsum-250 and loremIpsum-25 qui font 500Mo 250Mo et 25Mo en utilisant les fichiers loremIpsum and generator.sh (`./generator.sh loremIpsum X`). Copiez le fichier vers HDFS (put), affichez les (cat) aller voir les interface graphique puis supprimez les (rmr).
+Vous allez maintenant générer des fichiers via le script `generator.sh` téléchargeable avec un `curl https://raw.githubusercontent.com/HealerMikado/big_data_course_insset/main/Labs/lab%201-%20HDFS%20-%20MapReduce/TP1-Resources/generator.sh >> generator.sh`. Générez les fichiers loremIpsum-500, loremIpsum-250 and loremIpsum-25 qui font 500Mo 250Mo et 25Mo en utilisant les fichiers loremIpsum and generator.sh (`./generator.sh loremIpsum X`). Copiez le fichier vers HDFS (put), affichez les (cat) aller voir les interface graphique puis supprimez les (rmr).
 
 ## Lancer un tâche MapReduce de base
 
@@ -197,7 +197,11 @@ Le format utilisé est un format positionnel. Les données qui nous intéresse p
 - La qualité de la mesure qui se trouve au caractère d'index 92, on ne gardera uniquement les qualités suivante `0,1,4,5,9` 
 
 1. Téléchargez le dataset du TP disponible ici :
+
+   `curl https://raw.githubusercontent.com/HealerMikado/big_data_course_insset/main/Labs/lab%201-%20HDFS%20-%20MapReduce/TP1-Resources/meto_data.txt >> meteo_data.txt`
+
 2. Uploadez les données dans votre cluster HDFS
+
 3. Réalisez deux scripts :
    - Méthode map qui va extraire les données souhaités (année, température, qualité) et les transmettre dans la STDOUT
    - Méthode reduce qui va lire les couples année:temperature et extraire le max pour chaque année. Hadoop MapReduce nous facilie la vie en ordonnant les clefs pour la partie reduce (ici les année). Donc des que vous changez de clef, vous avez terminé l'année courante.
